@@ -69,6 +69,14 @@ h1 {
     border-radius: 6px;
     outline: none;
     transition: border-color 0.3s;
+     -moz-appearance: textfield; /* Для Firefox */
+    appearance: auto; /* Общая директива для современных браузеров */
+}
+
+.input-group input[type="number"]::-webkit-outer-spin-button,
+.input-group input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button; /* Правильное значение для стрелочек в WebKit-браузерах */
+    margin: 0;
 }
 
 .input-group input[type="number"]:focus {
