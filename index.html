@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Converter</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Блок предупреждений -->
+    <div id="warningBox" style="display:none; background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; padding: 15px; margin-bottom: 20px; border-radius: 5px; position: relative;">
+        <span id="warningText"></span>
+        <button id="closeWarningBtn" style="position: absolute; top: 5px; right: 10px; background-color: #f5c6cb; border: none; color: #721c24; cursor: pointer;">OK</button>
+    </div>
+
+    <h1>Color Converter: RGB ↔ XYZ ↔ HLS</h1>
+
+    <!-- Дисплей для отображения цвета -->
+    <div id="colorDisplay" class="color-display"></div>
+
+    <!-- Инструмент выбора цвета -->
+    <div class="input-group">
+        <label for="colorPicker">Select Color:</label>
+        <input type="color" id="colorPicker" value="#ff0000">
+    </div>
+
+    <!-- Группа ввода для RGB -->
+    <div class="input-group">
+        <h3>RGB Values</h3>
+        <label for="rInput">
+            R (Red):
+            <input type="number" id="rInput" min="0" max="255" value="255">
+<!--            <input type="range" id="rSlider" min="0" max="255" value="255">-->
+        </label>
+        <label for="gInput">
+            G (Green):g
+            <input type="number" id="gInput" min="0" max="255" value="0">
+<!--            <input type="range" id="gSlider" min="0" max="255" value="0">-->
+        </label>
+        <label for="bInput">
+            B (Blue):
+            <input type="number" id="bInput" min="0" max="255" value="0">
+<!--           // <input type="range" id="bSlider" min="0" max="255" value="0">-->
+        </label>
+    </div>
+
+    <!-- Группа ввода для XYZ -->
+    <div class="input-group">
+        <h3>XYZ Values</h3>
+        <label for="xInput">
+            X:<br>
+            <input type="number" id="xInput" min="0" max="95" step="1" value="41">
+<!--            <input type="range" id="xSlider" min="0" max="95" step="1" value="41">-->
+        </label>
+        <label for="yInput">
+            Y:<br>
+            <input type="number" id="yInput" min="0" max="100" step="1" value="21">
+<!--            <input type="range" id="ySlider" min="0" max="100" step="1" value="21">-->
+        </label>
+        <label for="zInput">
+            Z:<br>
+            <input type="number" id="zInput" min="0" max="108" step="1" value="1">
+<!--            <input type="range" id="zSlider" min="0" max="108" step="1" value="1">-->
+        </label>
+    </div>
+
+    <!-- Группа ввода для HLS -->
+    <div class="input-group">
+        <h3>HLS Values</h3>
+        <label for="hInput">
+            H (Hue):
+            <input type="number" id="hInput" min="0" max="360" value="0">
+<!--            <input type="range" id="hSlider" min="0" max="360" value="0">-->
+        </label>
+        <label for="lInput">
+            L (Lightness):
+            <input type="number" id="lInput" min="0" max="100" value="50">
+<!--            <input type="range" id="lSlider" min="0" max="100" value="50">-->
+        </label>
+        <label for="sInput">
+            S (Saturation):
+            <input type="number" id="sInput" min="0" max="100" value="100">
+<!--            <input type="range" id="sSlider" min="0" max="100" value="100">-->
+        </label>
+    </div>
+
+    <div id="warning"></div>
+</div>
+
+<!-- Подключаем JavaScript -->
+<script src="static/js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* Основные стили для body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #BC986A; /* Светлый кремовый фон */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Стили для заголовков */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #8D8741; /* Тёплый оливковый */
+}
+
+/* Контейнер для всей формы */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #FBEEC1; /* Кремовый фон контейнера */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* Стили для блока отображения цвета */
+.color-display {
+    width: 100%;
+    height: 120px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #659DBD; /* Голубой градиент */
+}
+
+/* Стили для групп ввода */
+.input-group {
+    display: grid;
+    grid-template-columns: 33% 33% 33%; /* Ширина столбцов для названий, полей ввода и ползунков */
+    gap: 10px; /* Отступ между столбцами */
+    margin-bottom: 30px;
+}
+
+/* Стили для заголовков групп */
+.input-group h3 {
+    grid-column: 1 / span 3; /* Заголовок группы занимает все три столбца */
+    font-size: 18px;
+    font-weight: 600;
+    color: #8D8741; /* Оливковый для заголовков */
+    margin-bottom: 10px;
+}
+
+/* Стили для названий */
+.input-group .label-text {
+    font-size: 15px;
+    color: #8D8741; /* Оливковый для текста */
+    margin-bottom: 5px;
+    text-align: left; /* Выравнивание по левому краю */
+}
+
+/* Поле ввода */
+.input-group input[type="number"] {
+    width: 70%; /* Полная ширина поля ввода */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #DAAD86; /* Светло-коричневый */
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input[type="number"]:focus {
+    border-color: #659DBD; /* Голубой при фокусе */
+}
+
+/* Ползунок */
+.input-group input[type="range"] {
+    width: 100%; /* Полная ширина ползунка */
+    cursor: pointer;
+    height: 25px;
+    background-color: transparent;
+}
+
+/* Стили для блока предупреждений */
+#warning {
+    font-size: 14px;
+    color: #BC986A; /* Коричнево-бежевый для предупреждений */
+    margin-top: 20px;
+    display: none;
+}
+
+/* Стили для кнопок */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #659DBD; /* Голубой для кнопок */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8D8741; /* Оливковый при наведении */
+}
+
+/* Медиазапрос для адаптации на мобильных устройствах */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .color-display {
+        height: 100px;
+    }
+}
