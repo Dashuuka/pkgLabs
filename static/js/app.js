@@ -42,10 +42,10 @@ const sRange = document.getElementById('sRange');
         alertPopup.textContent = message;
         alertPopup.style.display = 'block';
 
-        // Автоматическое скрытие через 3 секунды
+        // Автоматическое скрытие через 4 секунды
         setTimeout(() => {
             alertPopup.style.display = 'none';
-        }, 3500);
+        }, 4000);
     }
 
     const alertPopup = document.createElement('div');
